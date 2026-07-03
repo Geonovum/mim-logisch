@@ -3,19 +3,6 @@
 <meta content="text/html; charset=utf-8" http-equiv="content-type">
 <meta name="generator" content="ReSpec 37.0.0">
 <style>
-.issue-label{text-transform:initial}
-.warning>p:first-child{margin-top:0}
-.warning{padding:.5em;border-left-width:.5em;border-left-style:solid}
-span.warning{padding:.1em .5em .15em}
-.issue.closed span.issue-number{text-decoration:line-through}
-.issue.closed span.issue-number::after{content:" (Closed)";font-size:smaller}
-.warning{border-color:#f11;border-color:var(--warning-border,#f11);border-width:.2em;border-style:solid;background:#fbe9e9;background:var(--warning-bg,#fbe9e9);color:#000;color:var(--text,#000)}
-.warning-title:before{content:"⚠";font-size:1.3em;float:left;padding-right:.3em;margin-top:-.3em}
-li.task-list-item{list-style:none}
-input.task-list-item-checkbox{margin:0 .35em .25em -1.6em;vertical-align:middle}
-.issue a.respec-gh-label{padding:5px;margin:0 2px 0 2px;font-size:10px;text-transform:none;text-decoration:none;font-weight:700;border-radius:4px;position:relative;bottom:2px;border:none;display:inline-block}
-</style>
-<style>
 dfn{cursor:pointer}
 .dfn-panel{position:absolute;z-index:35;min-width:300px;max-width:500px;padding:.5em .75em;margin-top:.6em;font-family:"Helvetica Neue",sans-serif;font-size:small;background:#fff;background:var(--indextable-hover-bg,#fff);color:#000;color:var(--text,#000);box-shadow:0 1em 3em -.4em rgba(0,0,0,.3),0 0 1px 1px rgba(0,0,0,.05);box-shadow:0 1em 3em -.4em var(--tocsidebar-shadow,rgba(0,0,0,.3)),0 0 1px 1px var(--tocsidebar-shadow,rgba(0,0,0,.05));border-radius:2px}
 .dfn-panel:not(.docked)>.caret{position:absolute;top:-9px}
@@ -46,7 +33,7 @@ dfn{cursor:pointer}
   
   
 <script>document.title = respecConfig.title</script>
-<title>Geonovum template voor ReSpec</title>
+<title>MIM - Metamodel Informatiemodellering: Logisch Gegevensmodel (LGM)</title>
 
   
   
@@ -183,7 +170,7 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
     color: white;
     white-space: nowrap;
     z-index: 1;
-    background-color: #80CC28;
+    background-color: #FF0000;
   }
 </style>
 <script type="text/javascript">
@@ -337,8 +324,7 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
       "authors": [
         "T. Preston-Werner"
       ],
-      "date": "June 2013",
-      "id": "semver"
+      "date": "June 2013"
     },
     "MIM12": {
       "id": "MIM12",
@@ -1396,11 +1382,11 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
       "id": "WMCC11"
     }
   },
-  "title": "Geonovum template voor ReSpec",
-  "specStatus": "basis",
-  "specType": "HR",
-  "pubDomain": "3dbv",
-  "shortName": "nl-respec-template",
+  "title": "MIM - Metamodel Informatiemodellering: Logisch Gegevensmodel (LGM)",
+  "specStatus": "wv",
+  "specType": "ST",
+  "pubDomain": "mim",
+  "shortName": "mim-lgm",
   "publishDate": "2026-02-09",
   "publishVersion": [],
   "editors": [
@@ -1423,19 +1409,19 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
 
 <body class="h-entry"><div class="head">
     <a class="logo" href="https://www.geonovum.nl/geo-standaarden"><img alt="Geonovum" height="67" id="Geonovum" src="https://docs.geostandaarden.nl/media/Geonovum.svg" width="132">
-  </a> <h1 id="title" class="title">Geonovum template voor ReSpec</h1>
+  </a> <h1 id="title" class="title">MIM - Metamodel Informatiemodellering: Logisch Gegevensmodel (LGM)</h1>
     
     <h2>
-      Geonovum Handreiking<br>
-      Document
-      <time class="dt-published" datetime="2026-02-09">09 februari 2026</time>
+      Geonovum Standaard<br>
+      Werkversie
+      <time class="dt-published" datetime="2026-02-09">03 juli 2026</time>
     </h2>
     <dl>
       <dt>Deze versie:</dt><dd class="status">
-              <a class="u-url status" href="https://docs.geostandaarden.nl/3dbv/basis-hr-nl-respec-template-20260209">https://docs.geostandaarden.nl/3dbv/basis-hr-nl-respec-template-20260209</a>
+              <a class="u-url status" href="https://geonovum.github.io/NL-ReSpec-template/">https://geonovum.github.io/NL-ReSpec-template/</a>
             </dd>
       <dt>Laatst gepubliceerde versie:</dt><dd>
-              <a href="https://docs.geostandaarden.nl/3dbv/nl-respec-template/">https://docs.geostandaarden.nl/3dbv/nl-respec-template/</a>
+              <a href="https://docs.geostandaarden.nl/mim/mim-lgm/">https://docs.geostandaarden.nl/mim/mim-lgm/</a>
             </dd>
       <dt>Laatste werkversie:</dt><dd><a href="https://geonovum.github.io/NL-ReSpec-template/">https://geonovum.github.io/NL-ReSpec-template/</a></dd>
       
@@ -1475,68 +1461,39 @@ body:has(input[name=color-scheme][value=dark]:checked) .hljs{
 
 <section id="abstract" class="introductory"><h2>Samenvatting</h2><p>TODO: vul in abstract.md een abstract in.</p>
 </section>
-<section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een document zonder officiële status.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#niet-normatieve-deel"><bdi class="secno">1. </bdi>Niet-normatieve deel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#een-subparagraaf"><bdi class="secno">1.1 </bdi>Een subparagraaf</a></li></ol></li><li class="tocline"><a class="tocxref" href="#meer-inhoud"><bdi class="secno">2. </bdi>Meer inhoud</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#definities"><bdi class="secno">2.1 </bdi>Definities</a></li><li class="tocline"><a class="tocxref" href="#afbeeldingen"><bdi class="secno">2.2 </bdi>Afbeeldingen</a></li><li class="tocline"><a class="tocxref" href="#referenties"><bdi class="secno">2.3 </bdi>Referenties</a></li><li class="tocline"><a class="tocxref" href="#optioneel"><bdi class="secno">2.4 </bdi>Optioneel</a></li></ol></li><li class="tocline"><a class="tocxref" href="#mermaid-diagram"><bdi class="secno">3. </bdi>Mermaid diagram</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">4. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>Referenties</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normatieve-referenties"><bdi class="secno">A.1 </bdi>Normatieve referenties</a></li></ol></li></ol></nav>
+<section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">1. </bdi>Inleiding</a></li><li class="tocline"><a class="tocxref" href="#toepassingsgebied"><bdi class="secno">2. </bdi>Toepassingsgebied</a></li><li class="tocline"><a class="tocxref" href="#normreferenties"><bdi class="secno">3. </bdi>Normreferenties</a></li><li class="tocline"><a class="tocxref" href="#metamodel-lgm"><bdi class="secno">4. </bdi>Metamodel LGM</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inleiding-0"><bdi class="secno">4.1 </bdi>Inleiding</a></li><li class="tocline"><a class="tocxref" href="#structuur-metamodel"><bdi class="secno">4.2 </bdi>Structuur metamodel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kern"><bdi class="secno">4.2.1 </bdi>Kern</a></li><li class="tocline"><a class="tocxref" href="#datatypen"><bdi class="secno">4.2.2 </bdi>Datatypen</a></li><li class="tocline"><a class="tocxref" href="#overig"><bdi class="secno">4.2.3 </bdi>Overig</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#constraint"><bdi class="secno">4.2.3.1 </bdi>Constraint</a></li><li class="tocline"><a class="tocxref" href="#keuze"><bdi class="secno">4.2.3.2 </bdi>Keuze</a></li><li class="tocline"><a class="tocxref" href="#packages"><bdi class="secno">4.2.3.3 </bdi>Packages</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#specificaties-metagegevens"><bdi class="secno">4.3 </bdi>Specificaties metagegevens</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">5. </bdi>Conformiteit</a></li></ol></nav>
 
 
-<section class="informative" id="niet-normatieve-deel"><div class="header-wrapper"><h2 id="x1-niet-normatieve-deel"><bdi class="secno">1. </bdi>Niet-normatieve deel</h2><a class="self-link" href="#niet-normatieve-deel" aria-label="Permalink for Section 1."></a></div><p><em>Dit onderdeel is niet-normatief.</em></p>
-<p>Bijvoorbeeld een introductie is niet normatief.</p>
-<div class="note" role="note" id="issue-container-generatedID"><div role="heading" class="note-title marker" id="h-note" aria-level="3"><span>Noot</span><span class="issue-label">: index</span></div><p class="">
-Dit hoofdstuk is toegevoegd met <code>class="informative"</code> in <code>config.js</code>.
-</p></div><section id="een-subparagraaf"><div class="header-wrapper"><h3 id="x1-1-een-subparagraaf"><bdi class="secno">1.1 </bdi>Een subparagraaf</h3><a class="self-link" href="#een-subparagraaf" aria-label="Permalink for Section 1.1"></a></div>
-<p>Hier staat een tabel. Als de juiste style gekozen is ziet deze er goed uit.</p>
-<table>
-<thead>
-<tr>
-<th>Sleutel</th>
-<th>Waarde</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>key</td>
-<td>Deze waarde bevat een lange tekst zodat te zien is of de kolombreedte dynamisch wordt bepaald</td>
-</tr>
-</tbody></table>
+  <section id="inleiding"><div class="header-wrapper"><h2 id="x1-inleiding"><bdi class="secno">1. </bdi>Inleiding</h2><a class="self-link" href="#inleiding" aria-label="Permalink for Section 1."></a></div>
+</section>
+  <section id="toepassingsgebied"><div class="header-wrapper"><h2 id="x2-toepassingsgebied"><bdi class="secno">2. </bdi>Toepassingsgebied</h2><a class="self-link" href="#toepassingsgebied" aria-label="Permalink for Section 2."></a></div>
+</section>
+  <section id="normreferenties"><div class="header-wrapper"><h2 id="x3-normreferenties"><bdi class="secno">3. </bdi>Normreferenties</h2><a class="self-link" href="#normreferenties" aria-label="Permalink for Section 3."></a></div>
+</section>
+  
+  <section>
+
+
+<meta charset="utf-8">
+<title>Error</title>
+
+
+<pre aria-busy="false"><code class="hljs">Cannot GET /conformiteit.md</code></pre>
+
+</section>
+  <section id="metamodel-lgm"><div class="header-wrapper"><h2 id="x4-metamodel-lgm"><bdi class="secno">4. </bdi>Metamodel LGM</h2><a class="self-link" href="#metamodel-lgm" aria-label="Permalink for Section 4."></a></div>
+<section id="inleiding-0"><div class="header-wrapper"><h3 id="x4-1-inleiding"><bdi class="secno">4.1 </bdi>Inleiding</h3><a class="self-link" href="#inleiding-0" aria-label="Permalink for Section 4.1"></a></div>
+</section><section id="structuur-metamodel"><div class="header-wrapper"><h3 id="x4-2-structuur-metamodel"><bdi class="secno">4.2 </bdi>Structuur metamodel</h3><a class="self-link" href="#structuur-metamodel" aria-label="Permalink for Section 4.2"></a></div>
+<section id="kern"><div class="header-wrapper"><h4 id="x4-2-1-kern"><bdi class="secno">4.2.1 </bdi>Kern</h4><a class="self-link" href="#kern" aria-label="Permalink for Section 4.2.1"></a></div>
+</section><section id="datatypen"><div class="header-wrapper"><h4 id="x4-2-2-datatypen"><bdi class="secno">4.2.2 </bdi>Datatypen</h4><a class="self-link" href="#datatypen" aria-label="Permalink for Section 4.2.2"></a></div>
+</section><section id="overig"><div class="header-wrapper"><h4 id="x4-2-3-overig"><bdi class="secno">4.2.3 </bdi>Overig</h4><a class="self-link" href="#overig" aria-label="Permalink for Section 4.2.3"></a></div>
+<section id="constraint"><div class="header-wrapper"><h5 id="x4-2-3-1-constraint"><bdi class="secno">4.2.3.1 </bdi>Constraint</h5><a class="self-link" href="#constraint" aria-label="Permalink for Section 4.2.3.1"></a></div>
+</section><section id="keuze"><div class="header-wrapper"><h5 id="x4-2-3-2-keuze"><bdi class="secno">4.2.3.2 </bdi>Keuze</h5><a class="self-link" href="#keuze" aria-label="Permalink for Section 4.2.3.2"></a></div>
+</section><section id="packages"><div class="header-wrapper"><h5 id="x4-2-3-3-packages"><bdi class="secno">4.2.3.3 </bdi>Packages</h5><a class="self-link" href="#packages" aria-label="Permalink for Section 4.2.3.3"></a></div>
+</section></section></section><section id="specificaties-metagegevens"><div class="header-wrapper"><h3 id="x4-3-specificaties-metagegevens"><bdi class="secno">4.3 </bdi>Specificaties metagegevens</h3><a class="self-link" href="#specificaties-metagegevens" aria-label="Permalink for Section 4.3"></a></div>
 </section></section>
-<section id="meer-inhoud"><div class="header-wrapper"><h2 id="x2-meer-inhoud"><bdi class="secno">2. </bdi>Meer inhoud</h2><a class="self-link" href="#meer-inhoud" aria-label="Permalink for Section 2."></a></div>
-<section id="definities"><div class="header-wrapper"><h3 id="x2-1-definities"><bdi class="secno">2.1 </bdi>Definities</h3><a class="self-link" href="#definities" aria-label="Permalink for Section 2.1"></a></div>
-<p><dfn id="dfn-definitie" tabindex="0" aria-haspopup="dialog">Definitie</dfn>: Een definitie is een beschrijving van een woord. Een ander woord voor <em>definitie</em> is betekenis of beschrijving.</p>
-</section><section id="afbeeldingen"><div class="header-wrapper"><h3 id="x2-2-afbeeldingen"><bdi class="secno">2.2 </bdi>Afbeeldingen</h3><a class="self-link" href="#afbeeldingen" aria-label="Permalink for Section 2.2"></a></div>
-<p>Afbeeldingen krijgen een nummer en vermelding in de figurenlijst <a href="#tof" data-matched-text="[[[#tof]]]" class="sec-ref">Index</a>.</p>
-<p>
-      </p><figure id="fig-onderschrift">
-        <img src="media/Bomos_levenscyclus.svg" alt="Tekstueel alternatief voor toegankelijkheid">
-        <figcaption><a class="self-link" href="#fig-onderschrift">Figuur <bdi class="figno">1</bdi></a> <span class="fig-title">Onderschrift</span></figcaption>
-      </figure>
-    <p></p>
-</section><section id="referenties"><div class="header-wrapper"><h3 id="x2-3-referenties"><bdi class="secno">2.3 </bdi>Referenties</h3><a class="self-link" href="#referenties" aria-label="Permalink for Section 2.3"></a></div>
-<p>Referenties kunnen op drie plaatsen staan:</p>
-<ul>
-<li>In SpecRef <a href="https://www.specref.org/">Specref</a></li>
-<li>In de organisatie configuraties [<cite><a class="bibref" data-link-type="biblio" href="#bib-semver" title="Semantic Versioning 2.0.0">SemVer</a></cite>]. Deze zijn te vinden op <a href="https://github.com/Geonovum/tools.geostandaarden.nl/blob/main/tools.geostandaarden.nl/respec/config/geonovum-config.js">tools.geostandaarden.nl</a>.</li>
-<li>In het document, zoals [<cite><a class="bibref" data-link-type="biblio" href="#bib-mim12" title="MIM - Metamodel Informatie Modellering (Versie 1.2)">MIM12</a></cite>]. Deze zijn te vinden in <code>js/config.js</code>.</li>
-</ul>
-<p>Referentie uit organisatie lijst [<cite><a class="bibref" data-link-type="biblio" href="#bib-semver" title="Semantic Versioning 2.0.0">SemVer</a></cite>] of de locale lijst [<cite><a class="bibref" data-link-type="biblio" href="#bib-mim12" title="MIM - Metamodel Informatie Modellering (Versie 1.2)">MIM12</a></cite>]. Lijst staat in <code>organisation-config.js</code>. Alleen referenties die in de tekst voorkomen worden getoond.</p>
-<p>We gebruiken een <a href="#dfn-definitie" class="internalDFN" data-link-type="dfn" id="ref-for-dfn-definitie-1">definitie</a> om een woord te omschrijven.</p>
-</section><section id="optioneel"><div class="header-wrapper"><h3 id="x2-4-optioneel"><bdi class="secno">2.4 </bdi>Optioneel</h3><a class="self-link" href="#optioneel" aria-label="Permalink for Section 2.4"></a></div>
-<p>De onderstaande secties (<em>Conformiteit</em> e.d.) zijn optioneel, zie <code>index.html</code>:</p>
-<pre><code aria-busy="false" class="hljs xml"><span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"abstract"</span> <span class="hljs-attr">data-include-format</span>=<span class="hljs-string">"markdown"</span> <span class="hljs-attr">data-include</span>=<span class="hljs-string">"abstract.md"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"sotd"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span><span class="hljs-comment">&lt;!-- Wordt automatisch gevuld --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">data-include-format</span>=<span class="hljs-string">"markdown"</span> <span class="hljs-attr">class</span>=<span class="hljs-string">"informative"</span> <span class="hljs-attr">data-include</span>=<span class="hljs-string">"ch01.md"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">data-include-format</span>=<span class="hljs-string">"markdown"</span> <span class="hljs-attr">data-include</span>=<span class="hljs-string">"ch02.md"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-comment">&lt;!-- Hieronder optionele secties. Worden automatisch gevuld --&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'conformance'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">'tof'</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-  <span class="hljs-tag">&lt;<span class="hljs-name">section</span> <span class="hljs-attr">id</span>=<span class="hljs-string">"index"</span>&gt;</span><span class="hljs-tag">&lt;/<span class="hljs-name">section</span>&gt;</span>
-<span class="hljs-tag">&lt;/<span class="hljs-name">body</span>&gt;</span>
-</code></pre>
-</section></section>
-<section id="mermaid-diagram"><div class="header-wrapper"><h2 id="x3-mermaid-diagram"><bdi class="secno">3. </bdi>Mermaid diagram</h2><a class="self-link" href="#mermaid-diagram" aria-label="Permalink for Section 3."></a></div>
-<figure id="Mermaidvoorbeeld"><pre><svg id="diagram-1" width="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="max-width: 128.234375px;" viewBox="0 0 128.234375 248"><style>
-#diagram-1 {font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;fill:#333;}#diagram-1 .error-icon{fill:#552222;}#diagram-1 .error-text{fill:#552222;stroke:#552222;}#diagram-1 .edge-thickness-normal{stroke-width:2px;}#diagram-1 .edge-thickness-thick{stroke-width:3.5px;}#diagram-1 .edge-pattern-solid{stroke-dasharray:0;}#diagram-1 .edge-pattern-dashed{stroke-dasharray:3;}#diagram-1 .edge-pattern-dotted{stroke-dasharray:2;}#diagram-1 .marker{fill:#333333;stroke:#333333;}#diagram-1 .marker.cross{stroke:#333333;}#diagram-1 svg{font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:16px;}#diagram-1 .label{font-family:"trebuchet ms",verdana,arial,sans-serif;color:#333;}#diagram-1 .cluster-label text{fill:#333;}#diagram-1 .cluster-label span{color:#333;}#diagram-1 .label text,#diagram-1 span{fill:#333;color:#333;}#diagram-1 .node rect,#diagram-1 .node circle,#diagram-1 .node ellipse,#diagram-1 .node polygon,#diagram-1 .node path{fill:#ECECFF;stroke:#9370DB;stroke-width:1px;}#diagram-1 .node .label{text-align:center;}#diagram-1 .node.clickable{cursor:pointer;}#diagram-1 .arrowheadPath{fill:#333333;}#diagram-1 .edgePath .path{stroke:#333333;stroke-width:2.0px;}#diagram-1 .flowchart-link{stroke:#333333;fill:none;}#diagram-1 .edgeLabel{background-color:#e8e8e8;text-align:center;}#diagram-1 .edgeLabel rect{opacity:0.5;background-color:#e8e8e8;fill:#e8e8e8;}#diagram-1 .cluster rect{fill:#ffffde;stroke:#aaaa33;stroke-width:1px;}#diagram-1 .cluster text{fill:#333;}#diagram-1 .cluster span{color:#333;}#diagram-1 div.mermaidTooltip{position:absolute;text-align:center;max-width:200px;padding:2px;font-family:"trebuchet ms",verdana,arial,sans-serif;font-size:12px;background:hsl(80, 100%, 96.2745098039%);border:1px solid #aaaa33;border-radius:2px;pointer-events:none;z-index:100;}#diagram-1 :root{--mermaid-font-family:"trebuchet ms",verdana,arial,sans-serif;}
-</style><g><g class="output"><g class="clusters"></g><g class="edgePaths"><g class="edgePath LS-A LE-B" id="L-A-B" style="opacity: 1;"><path class="path" d="M48.55859375,47.77154964846383L44.354817708333336,52.64295804038653C40.151041666666664,57.514366432309224,31.743489583333332,67.25718321615462,27.539713541666668,76.29525827474397C23.3359375,85.33333333333333,23.3359375,93.66666666666667,23.3359375,97.83333333333333L23.3359375,102" marker-end="url(#arrowhead31)" style="fill:none"></path><defs><marker id="arrowhead31" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-A LE-C" id="L-A-C" style="opacity: 1;"><path class="path" d="M79.23046875,47.77154964846383L83.43424479166667,52.64295804038653C87.63802083333333,57.514366432309224,96.04557291666667,67.25718321615462,100.24934895833333,76.29525827474397C104.453125,85.33333333333333,104.453125,93.66666666666667,104.453125,97.83333333333333L104.453125,102" marker-end="url(#arrowhead32)" style="fill:none"></path><defs><marker id="arrowhead32" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-B LE-D" id="L-B-D" style="opacity: 1;"><path class="path" d="M23.3359375,146L23.3359375,150.16666666666666C23.3359375,154.33333333333334,23.3359375,162.66666666666666,27.465494791666668,171.6187357539568C31.595052083333332,180.57080484124694,39.854166666666664,190.14160968249382,43.983723958333336,194.92701210311728L48.11328125,199.71241452374073" marker-end="url(#arrowhead33)" style="fill:none"></path><defs><marker id="arrowhead33" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g><g class="edgePath LS-C LE-D" id="L-C-D" style="opacity: 1;"><path class="path" d="M104.453125,146L104.453125,150.16666666666666C104.453125,154.33333333333334,104.453125,162.66666666666666,100.32356770833333,171.6187357539568C96.19401041666667,180.57080484124694,87.93489583333333,190.14160968249382,83.80533854166667,194.92701210311728L79.67578125,199.71241452374073" marker-end="url(#arrowhead34)" style="fill:none"></path><defs><marker id="arrowhead34" viewBox="0 0 10 10" refX="9" refY="5" markerUnits="strokeWidth" markerWidth="8" markerHeight="6" orient="auto"><path d="M 0 0 L 10 5 L 0 10 z" class="arrowheadPath" style="stroke-width: 1; stroke-dasharray: 1, 0;"></path></marker></defs></g></g><g class="edgeLabels"><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-A-B" class="edgeLabel L-LS-A' L-LE-B"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-A-C" class="edgeLabel L-LS-A' L-LE-C"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-B-D" class="edgeLabel L-LS-B' L-LE-D"></span></div></foreignObject></g></g><g class="edgeLabel" transform="" style="opacity: 1;"><g transform="translate(0,0)" class="label"><rect rx="0" ry="0" width="0" height="0"></rect><foreignObject width="0" height="0"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;"><span id="L-L-C-D" class="edgeLabel L-LS-C' L-LE-D"></span></div></foreignObject></g></g></g><g class="nodes"><g class="node default" id="flowchart-A-24" transform="translate(63.89453125,30)" style="opacity: 1;"><rect rx="0" ry="0" x="-15.3359375" y="-22" width="30.671875" height="44" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-5.3359375,-12)"><foreignObject width="10.671875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">A</div></foreignObject></g></g></g><g class="node default" id="flowchart-B-25" transform="translate(23.3359375,124)" style="opacity: 1;"><rect rx="0" ry="0" x="-15.3359375" y="-22" width="30.671875" height="44" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-5.3359375,-12)"><foreignObject width="10.671875" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">B</div></foreignObject></g></g></g><g class="node default" id="flowchart-C-27" transform="translate(104.453125,124)" style="opacity: 1;"><rect rx="0" ry="0" x="-15.78125" y="-22" width="31.5625" height="44" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-5.78125,-12)"><foreignObject width="11.5625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">C</div></foreignObject></g></g></g><g class="node default" id="flowchart-D-29" transform="translate(63.89453125,218)" style="opacity: 1;"><rect rx="0" ry="0" x="-15.78125" y="-22" width="31.5625" height="44" class="label-container"></rect><g class="label" transform="translate(0,0)"><g transform="translate(-5.78125,-12)"><foreignObject width="11.5625" height="24"><div xmlns="http://www.w3.org/1999/xhtml" style="display: inline-block; white-space: nowrap;">D</div></foreignObject></g></g></g></g></g></g></svg></pre>
-<figcaption><a class="self-link" href="#Mermaidvoorbeeld">Figuur <bdi class="figno">2</bdi></a> <span class="fig-title">Mermaid voorbeeld</span></figcaption>
-</figure></section>
+  
+
 
  
 
@@ -1546,7 +1503,7 @@ Dit hoofdstuk is toegevoegd met <code>class="informative"</code> in <code>config
 
 
 
-<section id="conformance"><div class="header-wrapper"><h2 id="x4-conformiteit"><bdi class="secno">4. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 4."></a></div><p>Naast onderdelen die als niet-normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet-normatief. Verder is alles in dit document normatief.</p>
+<section id="conformance"><div class="header-wrapper"><h2 id="x5-conformiteit"><bdi class="secno">5. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 5."></a></div><p>Naast onderdelen die als niet-normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet-normatief. Verder is alles in dit document normatief.</p>
 <section id="tof">
 <section id="index" class="appendix"><div class="header-wrapper"><h4 id="index-0">Index</h4><a class="self-link" href="#index" aria-label="Permalink for this Appendix"></a></div>
 
@@ -1555,44 +1512,16 @@ Dit hoofdstuk is toegevoegd met <code>class="informative"</code> in <code>config
 <section id="index-defined-here">
     <div class="header-wrapper"><h5 id="termen-gedefinieerd-door-deze-specificatie">Termen gedefinieerd door deze specificatie</h5><a class="self-link" href="#index-defined-here" aria-label="Permalink for this Appendix"></a></div>
     <ul class="index">
-    <li>
-      <a class="index-term" href="#dfn-definitie">Definitie</a> 
-    <span class="print-only">§2.1</span></li>
+    
   </ul>
   </section><section id="index-defined-elsewhere">
     <div class="header-wrapper"><h5 id="termen-gedefinieerd-door-verwijzing">Termen gedefinieerd door verwijzing</h5><a class="self-link" href="#index-defined-elsewhere" aria-label="Permalink for this Appendix"></a></div>
     <ul class="index">
     
   </ul>
-  </section></section><h1>Lijst met figuren</h1><ul class="tof">
-        <li class="tofline">
-    <a class="tocxref" href="#fig-onderschrift"><span class="self-link">Figuur <bdi class="figno">1</bdi></span> <span class="fig-title">Onderschrift</span></a>
-  </li><li class="tofline">
-    <a class="tocxref" href="#Mermaidvoorbeeld"><span class="self-link">Figuur <bdi class="figno">2</bdi></span> <span class="fig-title">Mermaid voorbeeld</span></a>
-  </li>
-      </ul></section></section><section id="references" class="appendix"><div class="header-wrapper"><h2 id="a-referenties"><bdi class="secno">A. </bdi>Referenties</h2><a class="self-link" href="#references" aria-label="Permalink for Appendix A."></a></div><section id="normatieve-referenties">
-    <div class="header-wrapper"><h3 id="a-1-normatieve-referenties"><bdi class="secno">A.1 </bdi>Normatieve referenties</h3><a class="self-link" href="#normatieve-referenties" aria-label="Permalink for Appendix A.1"></a></div>
-    <dl class="bibliography"><dt id="bib-mim12">[MIM12]</dt><dd>
-      <a href="https://docs.geostandaarden.nl/mim/def-st-mim-20240613/"><cite>MIM - Metamodel Informatie Modellering (Versie 1.2)</cite></a>.  Geonovum. 2024-06-13. Definitief. URL: <a href="https://docs.geostandaarden.nl/mim/def-st-mim-20240613/">https://docs.geostandaarden.nl/mim/def-st-mim-20240613/</a>
-    </dd><dt id="bib-semver">[SemVer]</dt><dd>
-      <a href="https://semver.org"><cite>Semantic Versioning 2.0.0</cite></a>. T. Preston-Werner. June 2013. URL: <a href="https://semver.org">https://semver.org</a>
-    </dd></dl>
-  </section></section><p role="navigation" id="back-to-top">
+  </section></section></section></section><p role="navigation" id="back-to-top">
     <a href="#title"><abbr title="Terug naar boven">↑</abbr></a>
-  </p><div class="mermaidTooltip" style="opacity: 0;"></div><div class="dfn-panel" hidden="" role="dialog" aria-modal="true" id="dfn-panel-for-dfn-definitie" aria-label="Links in this document to definition: Definitie">
-      <span class="caret"></span>
-      <div>
-        <a class="self-link" href="#dfn-definitie" aria-label="Permalink for definition: Definitie. Activate to close this dialog.">Permalink</a>
-         
-        
-      </div>
-      <p><b>Referenced in:</b></p>
-      <ul>
-    <li>
-      <a href="#ref-for-dfn-definitie-1" title="§ 2.3 Referenties">§ 2.3 Referenties</a> 
-    </li>
-  </ul>
-    </div><script id="respec-dfn-panel">(() => {
+  </p><script id="respec-dfn-panel">(() => {
 // @ts-check
 if (document.respec) {
   document.respec.ready.then(setupPanel);
@@ -1831,4 +1760,4 @@ function hidePanel(panel) {
   panel.hidden = true;
   panel.classList.remove("docked");
 }
-})()</script><div class="sidelabel">Geonovum Handreiking - Document</div><script src="https://gitdocumentatie.logius.nl/publicatie/respec/fixup.js"></script></body></html>
+})()</script><div class="sidelabel">Geonovum Standaard - Werkversie</div><script src="https://gitdocumentatie.logius.nl/publicatie/respec/fixup.js"></script></body></html>
