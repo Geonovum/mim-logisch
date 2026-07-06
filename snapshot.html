@@ -29,6 +29,7 @@ dfn{cursor:pointer}
   
   
   
+  
 
   
   
@@ -112,7 +113,7 @@ ul.index code{color:inherit}
 #index-defined-here .print-only{display:initial}
 }
 </style>
-<meta name="description" content="TODO: vul in abstract.md een abstract in.">
+<meta name="description" content="Dit document beschrijft het metamodel voor een Logisch Gegevensmodel (MIM niveau 3). Dit metamodel is zelf ooi een logisch gegevensmodel: het beschrijft de logische structuur van de vastlegging van een logisch gegevensmodel.">
 <style>
 
   .sidelabel {
@@ -126,14 +127,6 @@ ul.index code{color:inherit}
     white-space: nowrap;
     z-index: 1;
     background-color: #FF0000;
-  }
-</style>
-<script type="text/javascript">
-   /* Any custom mermaid.js scripts will go here. */
-  </script>
-<style>
-
-  /* Any custom mermaid.js scripts will go here. */
   }
 </style>
 <script id="initialUserConfig" type="application/json">{
@@ -1346,14 +1339,14 @@ ul.index code{color:inherit}
   "publishVersion": [],
   "editors": [
     {
-      "name": "voornaam achternaam",
+      "name": "Werkgroep MIM Metamodel",
       "company": "Geonovum",
       "companyURL": "https://www.geonovum.nl"
     }
   ],
   "authors": [
     {
-      "name": "voornaam achternaam",
+      "name": "Paul Janssen",
       "company": "Geonovum",
       "companyURL": "https://www.geonovum.nl"
     }
@@ -1369,7 +1362,7 @@ ul.index code{color:inherit}
     <h2>
       Geonovum Standaard<br>
       Werkversie
-      <time class="dt-published" datetime="2026-02-09">03 juli 2026</time>
+      <time class="dt-published" datetime="2026-02-09">06 juli 2026</time>
     </h2>
     <dl>
       <dt>Deze versie:</dt><dd class="status">
@@ -1386,11 +1379,11 @@ ul.index code{color:inherit}
       
       <dt>Redacteur:</dt>
       <dd class="editor p-author h-card vcard">
-    <span class="p-name fn">voornaam achternaam</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
+    <span class="p-name fn">Werkgroep MIM Metamodel</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
   </dd>
       
       <dt>Auteur:</dt><dd class="editor p-author h-card vcard">
-    <span class="p-name fn">voornaam achternaam</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
+    <span class="p-name fn">Paul Janssen</span> (<a class="p-org org h-org" href="https://www.geonovum.nl">Geonovum</a>)
   </dd>
       <dt>Doe mee:</dt><dd>
     <a href="https://github.com/Geonovum/NL-ReSpec-template/">GitHub Geonovum/NL-ReSpec-template</a>
@@ -1414,35 +1407,662 @@ ul.index code{color:inherit}
     <hr title="Separator for header">
   </div>
 
-<section id="abstract" class="introductory"><h2>Samenvatting</h2><p>TODO: vul in abstract.md een abstract in.</p>
+<section id="abstract" class="introductory"><h2>Samenvatting</h2><p>Dit document beschrijft het metamodel voor een Logisch Gegevensmodel (MIM niveau 3). Dit metamodel is zelf ooi een logisch gegevensmodel: het beschrijft de logische structuur van de vastlegging van een logisch gegevensmodel.</p>
 </section>
-<section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#inleiding"><bdi class="secno">1. </bdi>Inleiding</a></li><li class="tocline"><a class="tocxref" href="#toepassingsgebied"><bdi class="secno">2. </bdi>Toepassingsgebied</a></li><li class="tocline"><a class="tocxref" href="#normreferenties"><bdi class="secno">3. </bdi>Normreferenties</a></li><li class="tocline"><a class="tocxref" href="#conformiteit"><bdi class="secno">4. </bdi>Conformiteit</a></li><li class="tocline"><a class="tocxref" href="#metamodel-lgm"><bdi class="secno">5. </bdi>Metamodel LGM</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#inleiding-0"><bdi class="secno">5.1 </bdi>Inleiding</a></li><li class="tocline"><a class="tocxref" href="#structuur-metamodel"><bdi class="secno">5.2 </bdi>Structuur metamodel</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#kern"><bdi class="secno">5.2.1 </bdi>Kern</a></li><li class="tocline"><a class="tocxref" href="#datatypen"><bdi class="secno">5.2.2 </bdi>Datatypen</a></li><li class="tocline"><a class="tocxref" href="#overig"><bdi class="secno">5.2.3 </bdi>Overig</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#constraint"><bdi class="secno">5.2.3.1 </bdi>Constraint</a></li><li class="tocline"><a class="tocxref" href="#keuze"><bdi class="secno">5.2.3.2 </bdi>Keuze</a></li><li class="tocline"><a class="tocxref" href="#packages"><bdi class="secno">5.2.3.3 </bdi>Packages</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#specificaties-metagegevens"><bdi class="secno">5.3 </bdi>Specificaties metagegevens</a></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">6. </bdi>Conformiteit</a></li></ol></nav>
+<section id="sotd" class="introductory"><h2>Status van dit document</h2><p>Dit is een werkversie die op elk moment kan worden gewijzigd, verwijderd of vervangen door andere documenten. Het is geen stabiel document.</p></section><nav id="toc"><h2 class="introductory" id="inhoudsopgave">Inhoudsopgave</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Samenvatting</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status van dit document</a></li><li class="tocline"><a class="tocxref" href="#domein-mim-metaklassen-lgm-logisch"><bdi class="secno">1. </bdi>Domein MIM-Metaklassen-LGM-Logisch</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#lgm-lgm-mim-detail"><bdi class="secno">1.1 </bdi>LGM-LGM-MIM - detail</a></li><li class="tocline"><a class="tocxref" href="#objecttypes-en-relatieklassen"><bdi class="secno">1.2 </bdi>Objecttypes en relatieklassen</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#B85CF0D3-1EA4-4bc2-BEC1-8187A49D5824"><bdi class="secno">1.2.1 </bdi>Attribuutgegevenstype!</a></li><li class="tocline"><a class="tocxref" href="#EAA7F9B8-7A33-42fd-8CDE-0B576697598F"><bdi class="secno">1.2.2 </bdi>Codelijst!</a></li><li class="tocline"><a class="tocxref" href="#824B07CB-FC8C-4f57-8827-BD643CB3DA3D"><bdi class="secno">1.2.3 </bdi>Compositie/genest gegevenstype!</a></li><li class="tocline"><a class="tocxref" href="#09E003D3-8AD7-474d-8291-F8C4C9C8AE90"><bdi class="secno">1.2.4 </bdi>Datatype</a></li><li class="tocline"><a class="tocxref" href="#58BAE188-BCEB-4a00-BD16-6A49C237E078"><bdi class="secno">1.2.5 </bdi>Enumeratie!</a></li><li class="tocline"><a class="tocxref" href="#97409214-7B52-4a4e-B563-7A894919DE54"><bdi class="secno">1.2.6 </bdi>Extensie!</a></li><li class="tocline"><a class="tocxref" href="#A20B6FED-9D1A-4adb-8227-A722613AAFB7"><bdi class="secno">1.2.7 </bdi>Gegevensgroeptype</a></li><li class="tocline"><a class="tocxref" href="#D0282BA4-C2F8-4d8c-BF2D-01844E161EEC"><bdi class="secno">1.2.8 </bdi>Gegevensobjecttype</a></li><li class="tocline"><a class="tocxref" href="#A73BCD29-D696-47b5-B247-1891B846CCD2"><bdi class="secno">1.2.9 </bdi>Gegevenstype</a></li><li class="tocline"><a class="tocxref" href="#9E58E202-57E3-4cfa-8BAD-4A149125484C"><bdi class="secno">1.2.10 </bdi>Gestructureerd datatype</a></li><li class="tocline"><a class="tocxref" href="#B8194110-F0D6-4391-9D81-11EB1AD611A1"><bdi class="secno">1.2.11 </bdi>Identificator</a></li><li class="tocline"><a class="tocxref" href="#164B52BC-D0BB-4a1c-AC05-D09540F737B8"><bdi class="secno">1.2.12 </bdi>Logisch-ID?</a></li><li class="tocline"><a class="tocxref" href="#75374898-4AFB-4c0f-AE28-25599EAF59F3"><bdi class="secno">1.2.13 </bdi>Referentielijst!</a></li><li class="tocline"><a class="tocxref" href="#7ADA30AB-7A47-4301-B3DD-F2A94917D8C4"><bdi class="secno">1.2.14 </bdi>Verwijzinggegevenstype!</a></li><li class="tocline"><a class="tocxref" href="#6E318C51-642F-4f4d-957B-77C5D42021E1"><bdi class="secno">1.2.15 </bdi>Waardelijst!</a></li></ol></li></ol></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">2. </bdi>Conformiteit</a></li></ol></nav>
 
 
-  <section id="inleiding"><div class="header-wrapper"><h2 id="x1-inleiding"><bdi class="secno">1. </bdi>Inleiding</h2><a class="self-link" href="#inleiding" aria-label="Permalink for Section 1."></a></div>
-</section>
-  <section id="toepassingsgebied"><div class="header-wrapper"><h2 id="x2-toepassingsgebied"><bdi class="secno">2. </bdi>Toepassingsgebied</h2><a class="self-link" href="#toepassingsgebied" aria-label="Permalink for Section 2."></a></div>
-</section>
-  <section id="normreferenties"><div class="header-wrapper"><h2 id="x3-normreferenties"><bdi class="secno">3. </bdi>Normreferenties</h2><a class="self-link" href="#normreferenties" aria-label="Permalink for Section 3."></a></div>
-</section>
-  
-  <section id="conformiteit"><div class="header-wrapper"><h2 id="x4-conformiteit"><bdi class="secno">4. </bdi>Conformiteit</h2><a class="self-link" href="#conformiteit" aria-label="Permalink for Section 4."></a></div>
-</section>
-  <section id="metamodel-lgm"><div class="header-wrapper"><h2 id="x5-metamodel-lgm"><bdi class="secno">5. </bdi>Metamodel LGM</h2><a class="self-link" href="#metamodel-lgm" aria-label="Permalink for Section 5."></a></div>
-<section id="inleiding-0"><div class="header-wrapper"><h3 id="x5-1-inleiding"><bdi class="secno">5.1 </bdi>Inleiding</h3><a class="self-link" href="#inleiding-0" aria-label="Permalink for Section 5.1"></a></div>
-</section><section id="structuur-metamodel"><div class="header-wrapper"><h3 id="x5-2-structuur-metamodel"><bdi class="secno">5.2 </bdi>Structuur metamodel</h3><a class="self-link" href="#structuur-metamodel" aria-label="Permalink for Section 5.2"></a></div>
-<section id="kern"><div class="header-wrapper"><h4 id="x5-2-1-kern"><bdi class="secno">5.2.1 </bdi>Kern</h4><a class="self-link" href="#kern" aria-label="Permalink for Section 5.2.1"></a></div>
-</section><section id="datatypen"><div class="header-wrapper"><h4 id="x5-2-2-datatypen"><bdi class="secno">5.2.2 </bdi>Datatypen</h4><a class="self-link" href="#datatypen" aria-label="Permalink for Section 5.2.2"></a></div>
-</section><section id="overig"><div class="header-wrapper"><h4 id="x5-2-3-overig"><bdi class="secno">5.2.3 </bdi>Overig</h4><a class="self-link" href="#overig" aria-label="Permalink for Section 5.2.3"></a></div>
-<section id="constraint"><div class="header-wrapper"><h5 id="x5-2-3-1-constraint"><bdi class="secno">5.2.3.1 </bdi>Constraint</h5><a class="self-link" href="#constraint" aria-label="Permalink for Section 5.2.3.1"></a></div>
-</section><section id="keuze"><div class="header-wrapper"><h5 id="x5-2-3-2-keuze"><bdi class="secno">5.2.3.2 </bdi>Keuze</h5><a class="self-link" href="#keuze" aria-label="Permalink for Section 5.2.3.2"></a></div>
-</section><section id="packages"><div class="header-wrapper"><h5 id="x5-2-3-3-packages"><bdi class="secno">5.2.3.3 </bdi>Packages</h5><a class="self-link" href="#packages" aria-label="Permalink for Section 5.2.3.3"></a></div>
-</section></section></section><section id="specificaties-metagegevens"><div class="header-wrapper"><h3 id="x5-3-specificaties-metagegevens"><bdi class="secno">5.3 </bdi>Specificaties metagegevens</h3><a class="self-link" href="#specificaties-metagegevens" aria-label="Permalink for Section 5.3"></a></div>
-</section></section>
-  
+<section id="domein-mim-metaklassen-lgm-logisch"><div class="header-wrapper"><h2 id="x1-domein-mim-metaklassen-lgm-logisch"><bdi class="secno">1. </bdi>Domein MIM-Metaklassen-LGM-Logisch</h2><a class="self-link" href="#domein-mim-metaklassen-lgm-logisch" aria-label="Permalink for Section 1."></a></div>
+<section id="lgm-lgm-mim-detail"><div class="header-wrapper"><h3 id="x1-1-lgm-lgm-mim-detail"><bdi class="secno">1.1 </bdi>LGM-LGM-MIM - detail</h3><a class="self-link" href="#lgm-lgm-mim-detail" aria-label="Permalink for Section 1.1"></a></div>
+<p><img src="media/1C3FC765-E283-481c-8663-4006538A1965.svg" alt=""></p>
+</section><section id="objecttypes-en-relatieklassen"><div class="header-wrapper"><h3 id="x1-2-objecttypes-en-relatieklassen"><bdi class="secno">1.2 </bdi>Objecttypes en relatieklassen</h3><a class="self-link" href="#objecttypes-en-relatieklassen" aria-label="Permalink for Section 1.2"></a></div>
+<section id="attribuutgegevenstype"><div class="header-wrapper"><h4 id="B85CF0D3-1EA4-4bc2-BEC1-8187A49D5824"><bdi class="secno">1.2.1 </bdi>Attribuutgegevenstype!</h4><a class="self-link" href="#B85CF0D3-1EA4-4bc2-BEC1-8187A49D5824" aria-label="Permalink for Section 1.2.1"></a></div><table class="simple def">
+<thead>
+
+</thead>
+<tbody><tr>
+<th>Naam</th>
+<td>Attribuutgegevenstype!</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>Nee</td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Relatie</th>
+<th>Definitie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#B85CF0D3-1EA4-4bc2-BEC1-8187A49D5824">Attribuutgegevenstype!</a> heeft als waardetype waardetype <a href="#09E003D3-8AD7-474d-8291-F8C4C9C8AE90">Datatype</a> []</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#B85CF0D3-1EA4-4bc2-BEC1-8187A49D5824">Attribuutgegevenstype!</a> is specialisatie van <a href="#A73BCD29-D696-47b5-B247-1891B846CCD2">Gegevenstype</a></td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="codelijst"><div class="header-wrapper"><h4 id="EAA7F9B8-7A33-42fd-8CDE-0B576697598F"><bdi class="secno">1.2.2 </bdi>Codelijst!</h4><a class="self-link" href="#EAA7F9B8-7A33-42fd-8CDE-0B576697598F" aria-label="Permalink for Section 1.2.2"></a></div><table class="simple def">
+<thead>
+
+</thead>
+<tbody><tr>
+<th>Naam</th>
+<td>Codelijst!</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>Nee</td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Relatie</th>
+<th>Definitie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#EAA7F9B8-7A33-42fd-8CDE-0B576697598F">Codelijst!</a> is specialisatie van <a href="#6E318C51-642F-4f4d-957B-77C5D42021E1">Waardelijst!</a></td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="compositie-genest-gegevenstype"><div class="header-wrapper"><h4 id="824B07CB-FC8C-4f57-8827-BD643CB3DA3D"><bdi class="secno">1.2.3 </bdi>Compositie/genest gegevenstype!</h4><a class="self-link" href="#824B07CB-FC8C-4f57-8827-BD643CB3DA3D" aria-label="Permalink for Section 1.2.3"></a></div><table class="simple def">
+<thead>
+
+</thead>
+<tbody><tr>
+<th>Naam</th>
+<td>Compositie/genest gegevenstype!</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>Nee</td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Relatie</th>
+<th>Definitie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#824B07CB-FC8C-4f57-8827-BD643CB3DA3D">Compositie/genest gegevenstype!</a> heeft als waardetype genest gegevensgroeptype <a href="#A20B6FED-9D1A-4adb-8227-A722613AAFB7">Gegevensgroeptype</a> [1..1]</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#824B07CB-FC8C-4f57-8827-BD643CB3DA3D">Compositie/genest gegevenstype!</a> is specialisatie van <a href="#A73BCD29-D696-47b5-B247-1891B846CCD2">Gegevenstype</a></td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="datatype"><div class="header-wrapper"><h4 id="09E003D3-8AD7-474d-8291-F8C4C9C8AE90"><bdi class="secno">1.2.4 </bdi>Datatype</h4><a class="self-link" href="#09E003D3-8AD7-474d-8291-F8C4C9C8AE90" aria-label="Permalink for Section 1.2.4"></a></div><p>Een datatype is een conditie waarbij van een kenmerk of waarde is gesteld wat voor datatype de waarde of invulling van dat kenmerk mag zijn.</p>
+<table class="simple def">
+<thead>
+
+</thead>
+<tbody><tr>
+<th>Naam</th>
+<td>Datatype</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Een datatype is een conditie waarbij van een kenmerk of waarde is gesteld wat voor datatype de waarde of invulling van dat kenmerk mag zijn.</td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Relatie</th>
+<th>Definitie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#6E318C51-642F-4f4d-957B-77C5D42021E1">Waardelijst!</a> is specialisatie van <a href="#09E003D3-8AD7-474d-8291-F8C4C9C8AE90">Datatype</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#9E58E202-57E3-4cfa-8BAD-4A149125484C">Gestructureerd datatype</a> is specialisatie van <a href="#09E003D3-8AD7-474d-8291-F8C4C9C8AE90">Datatype</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#B85CF0D3-1EA4-4bc2-BEC1-8187A49D5824">Attribuutgegevenstype!</a> heeft als waardetype waardetype <a href="#09E003D3-8AD7-474d-8291-F8C4C9C8AE90">Datatype</a> []</td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="enumeratie"><div class="header-wrapper"><h4 id="58BAE188-BCEB-4a00-BD16-6A49C237E078"><bdi class="secno">1.2.5 </bdi>Enumeratie!</h4><a class="self-link" href="#58BAE188-BCEB-4a00-BD16-6A49C237E078" aria-label="Permalink for Section 1.2.5"></a></div><table class="simple def">
+<thead>
+
+</thead>
+<tbody><tr>
+<th>Naam</th>
+<td>Enumeratie!</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>Nee</td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Relatie</th>
+<th>Definitie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#58BAE188-BCEB-4a00-BD16-6A49C237E078">Enumeratie!</a> is specialisatie van <a href="#6E318C51-642F-4f4d-957B-77C5D42021E1">Waardelijst!</a></td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="extensie"><div class="header-wrapper"><h4 id="97409214-7B52-4a4e-B563-7A894919DE54"><bdi class="secno">1.2.6 </bdi>Extensie!</h4><a class="self-link" href="#97409214-7B52-4a4e-B563-7A894919DE54" aria-label="Permalink for Section 1.2.6"></a></div><table class="simple def">
+<thead>
+
+</thead>
+<tbody><tr>
+<th>Naam</th>
+<td>Extensie!</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>Nee</td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Relatie</th>
+<th>Definitie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#D0282BA4-C2F8-4d8c-BF2D-01844E161EEC">Gegevensobjecttype</a> heeft extensie extensie <a href="#97409214-7B52-4a4e-B563-7A894919DE54">Extensie!</a> []</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#97409214-7B52-4a4e-B563-7A894919DE54">Extensie!</a> is specialisatie van</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#97409214-7B52-4a4e-B563-7A894919DE54">Extensie!</a> heeft extensiebasis extensiebasis <a href="#D0282BA4-C2F8-4d8c-BF2D-01844E161EEC">Gegevensobjecttype</a> []</td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="gegevensgroeptype"><div class="header-wrapper"><h4 id="A20B6FED-9D1A-4adb-8227-A722613AAFB7"><bdi class="secno">1.2.7 </bdi>Gegevensgroeptype</h4><a class="self-link" href="#A20B6FED-9D1A-4adb-8227-A722613AAFB7" aria-label="Permalink for Section 1.2.7"></a></div><p>Een gegevensgroeptype is een typering van gelijksoortige gegevensgroepen.</p>
+<p>of uit uitleg:
+Een gegevensgroeptype (of groeperend gegevensobjecttype) is een gegevensobjecttype zonder hoofdonderwerp</p>
+<table class="simple def">
+<thead>
+
+</thead>
+<tbody><tr>
+<th>Naam</th>
+<td>Gegevensgroeptype</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Een gegevensgroeptype is een typering van gelijksoortige gegevensgroepen.</td>
+</tr>
+<tr>
+<th></th>
+<td></td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Relatie</th>
+<th>Definitie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#824B07CB-FC8C-4f57-8827-BD643CB3DA3D">Compositie/genest gegevenstype!</a> heeft als waardetype genest gegevensgroeptype <a href="#A20B6FED-9D1A-4adb-8227-A722613AAFB7">Gegevensgroeptype</a> [1..1]</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#D0282BA4-C2F8-4d8c-BF2D-01844E161EEC">Gegevensobjecttype</a> is specialisatie van <a href="#A20B6FED-9D1A-4adb-8227-A722613AAFB7">Gegevensgroeptype</a></td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="gegevensobjecttype"><div class="header-wrapper"><h4 id="D0282BA4-C2F8-4d8c-BF2D-01844E161EEC"><bdi class="secno">1.2.8 </bdi>Gegevensobjecttype</h4><a class="self-link" href="#D0282BA4-C2F8-4d8c-BF2D-01844E161EEC" aria-label="Permalink for Section 1.2.8"></a></div><p>Een GEGEVENSOBJECTTYPE is een typering van gelijksoortige GEGEVENSOBJECTen.</p>
+<table class="simple def">
+<thead>
+
+</thead>
+<tbody><tr>
+<th>Naam</th>
+<td>Gegevensobjecttype</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Definitie</th>
+<td>Een GEGEVENSOBJECTTYPE is een typering van gelijksoortige GEGEVENSOBJECTen.</td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Attribuut</th>
+<th>Definitie</th>
+<th>Formaat</th>
+<th>Card</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>is beschrijvend</td>
+<td>Een beschrijvend gegevensobjecttype is een gegevensobjecttype met precies één hoofdonderwerp, zonder dat de sleutel van het hoofdonderwerp bekend is</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="">Boolean</a></td>
+<td>1..1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>eenduidig</td>
+<td>Een eenduidig gegevensobjecttype is een gegevensobjecttype met precies één hoofdonderwerp waarvan de sleutel bekend is.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="">Boolean</a></td>
+<td>1..1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>strikt eenduidig gegevensobjecttype</td>
+<td>Een strikt eenduidig gegevensobjecttype is een gegevensobjecttype over alleen eigenschappen van het hoofdonderwerp waarvan de sleutel bekend is.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="">Boolean</a></td>
+<td>1..1</td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Relatie</th>
+<th>Definitie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#D0282BA4-C2F8-4d8c-BF2D-01844E161EEC">Gegevensobjecttype</a> heeft extensie extensie <a href="#97409214-7B52-4a4e-B563-7A894919DE54">Extensie!</a> []</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#D0282BA4-C2F8-4d8c-BF2D-01844E161EEC">Gegevensobjecttype</a> heeft gegevenstype gegevenstype <a href="#A73BCD29-D696-47b5-B247-1891B846CCD2">Gegevenstype</a> [0..*]</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#D0282BA4-C2F8-4d8c-BF2D-01844E161EEC">Gegevensobjecttype</a> is specialisatie van</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#D0282BA4-C2F8-4d8c-BF2D-01844E161EEC">Gegevensobjecttype</a> is specialisatie van <a href="#A20B6FED-9D1A-4adb-8227-A722613AAFB7">Gegevensgroeptype</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#7ADA30AB-7A47-4301-B3DD-F2A94917D8C4">Verwijzinggegevenstype!</a> heeft als waardetype een doelgegevensobjecttype doelgegevensobjecttype <a href="#D0282BA4-C2F8-4d8c-BF2D-01844E161EEC">Gegevensobjecttype</a> [1..1]</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#D0282BA4-C2F8-4d8c-BF2D-01844E161EEC">Gegevensobjecttype</a> heeft hoofdonderwerptype <a href="#A80A4669-D70D-42cd-9E1D-856E1DFF20F6">Objecttype</a> [0..1]</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#97409214-7B52-4a4e-B563-7A894919DE54">Extensie!</a> heeft extensiebasis extensiebasis <a href="#D0282BA4-C2F8-4d8c-BF2D-01844E161EEC">Gegevensobjecttype</a> []</td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="gegevenstype"><div class="header-wrapper"><h4 id="A73BCD29-D696-47b5-B247-1891B846CCD2"><bdi class="secno">1.2.9 </bdi>Gegevenstype</h4><a class="self-link" href="#A73BCD29-D696-47b5-B247-1891B846CCD2" aria-label="Permalink for Section 1.2.9"></a></div><p>Een GEGEVENSTYPE is een typering van gelijksoortige GEGEVENs.</p>
+<table class="simple def">
+<thead>
+
+</thead>
+<tbody><tr>
+<th>Definitie</th>
+<td>Een GEGEVENSTYPE is een typering van gelijksoortige GEGEVENs.</td>
+</tr>
+<tr>
+<th>Naam</th>
+<td>Gegevenstype</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>Ja</td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Attribuut</th>
+<th>Definitie</th>
+<th>Formaat</th>
+<th>Card</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>samengesteld enkelvoudig</td>
+<td>Een samengesteld enkelvoudig gegevenstype is een gegevenstype over één kenmerk van meerdere domeinobjecten.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="">Boolean</a></td>
+<td>1..1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>is sleutelonderdeel?</td>
+<td>Een sleutelonderdeel  is onderdeel van een groep van één of meer gegevenstypen waarmee een unieke aanduiding voor het hoofdonderwerp van een gegevensobject kan worden gevormd.</td>
+<td><a href="">Boolean</a></td>
+<td>1..1</td>
+</tr>
+<tr>
+<td>samengesteld meervoudig</td>
+<td>Een samengesteld meervoudig gegevenstype is een gegevenstype over meerdere eigenschappen van één of meerdere domeinobjecten.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="">Boolean</a></td>
+<td>1..1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>indirect gegevenstype</td>
+<td>Een indirect gegevenstype is een gegevenstype over één kenmerk van een domeinobject, vastgelegd bij een gegevensobjecttype dat dit domeinobject niet als hoofdonderwerp heeft</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="">Boolean</a></td>
+<td>1..1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>direct gegevenstype</td>
+<td>Een direct gegevenstype is een gegevenstype over één eigenschap van een domeinobject, vastgelegd bij een gegevensobjectype dat dit domeinobject als hoofdonderwerp heeft.</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="">Boolean</a></td>
+<td>1..1</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>cardinaliteit</td>
+<td></td>
+<td><a href="">CharacterString</a></td>
+<td>1..1</td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Relatie</th>
+<th>Definitie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#D0282BA4-C2F8-4d8c-BF2D-01844E161EEC">Gegevensobjecttype</a> heeft gegevenstype gegevenstype <a href="#A73BCD29-D696-47b5-B247-1891B846CCD2">Gegevenstype</a> [0..*]</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#A73BCD29-D696-47b5-B247-1891B846CCD2">Gegevenstype</a> betreft onderwerptype <a href="#A80A4669-D70D-42cd-9E1D-856E1DFF20F6">Objecttype</a> [1..*]</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#A73BCD29-D696-47b5-B247-1891B846CCD2">Gegevenstype</a> is specialisatie van</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#824B07CB-FC8C-4f57-8827-BD643CB3DA3D">Compositie/genest gegevenstype!</a> is specialisatie van <a href="#A73BCD29-D696-47b5-B247-1891B846CCD2">Gegevenstype</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#7ADA30AB-7A47-4301-B3DD-F2A94917D8C4">Verwijzinggegevenstype!</a> is specialisatie van <a href="#A73BCD29-D696-47b5-B247-1891B846CCD2">Gegevenstype</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#B85CF0D3-1EA4-4bc2-BEC1-8187A49D5824">Attribuutgegevenstype!</a> is specialisatie van <a href="#A73BCD29-D696-47b5-B247-1891B846CCD2">Gegevenstype</a></td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="gestructureerd-datatype"><div class="header-wrapper"><h4 id="9E58E202-57E3-4cfa-8BAD-4A149125484C"><bdi class="secno">1.2.10 </bdi>Gestructureerd datatype</h4><a class="self-link" href="#9E58E202-57E3-4cfa-8BAD-4A149125484C" aria-label="Permalink for Section 1.2.10"></a></div><table class="simple def">
+<thead>
+
+</thead>
+<tbody><tr>
+<th>Naam</th>
+<td>Gestructureerd datatype</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>Nee</td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Relatie</th>
+<th>Definitie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#9E58E202-57E3-4cfa-8BAD-4A149125484C">Gestructureerd datatype</a> is specialisatie van <a href="#09E003D3-8AD7-474d-8291-F8C4C9C8AE90">Datatype</a></td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="identificator"><div class="header-wrapper"><h4 id="B8194110-F0D6-4391-9D81-11EB1AD611A1"><bdi class="secno">1.2.11 </bdi>Identificator</h4><a class="self-link" href="#B8194110-F0D6-4391-9D81-11EB1AD611A1" aria-label="Permalink for Section 1.2.11"></a></div><p>Een identificator is een geheel van één of meerdere [identificerende kenmerken] waarmee de identiteit van een [domeinobject] uniek kan worden vastgesteld</p>
+<table class="simple def">
+<thead>
+
+</thead>
+<tbody><tr>
+<th>Definitie</th>
+<td>Een identificator is een geheel van één of meerdere [identificerende kenmerken] waarmee de identiteit van een [domeinobject] uniek kan worden vastgesteld</td>
+</tr>
+<tr>
+<th>Herkomst</th>
+<td></td>
+</tr>
+<tr>
+<th>Begrip</th>
+<td></td>
+</tr>
+<tr>
+<th>TODO: alias</th>
+<td></td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>Nee</td>
+</tr>
+<tr>
+<th>Herkomst definitie</th>
+<td></td>
+</tr>
+<tr>
+<th>Datum opname</th>
+<td></td>
+</tr>
+<tr>
+<th>Naam</th>
+<td>Identificator</td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Relatie</th>
+<th>Definitie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#B8194110-F0D6-4391-9D81-11EB1AD611A1">Identificator</a>   <a href="#B8194110-F0D6-4391-9D81-11EB1AD611A1">Identificator</a> [0..*]</td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="logisch-id"><div class="header-wrapper"><h4 id="164B52BC-D0BB-4a1c-AC05-D09540F737B8"><bdi class="secno">1.2.12 </bdi>Logisch-ID?</h4><a class="self-link" href="#164B52BC-D0BB-4a1c-AC05-D09540F737B8" aria-label="Permalink for Section 1.2.12"></a></div><table class="simple def">
+<thead>
+
+</thead>
+<tbody><tr>
+<th>Naam</th>
+<td>Logisch-ID?</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>Nee</td>
+</tr>
+</tbody></table>
+</section><section id="referentielijst"><div class="header-wrapper"><h4 id="75374898-4AFB-4c0f-AE28-25599EAF59F3"><bdi class="secno">1.2.13 </bdi>Referentielijst!</h4><a class="self-link" href="#75374898-4AFB-4c0f-AE28-25599EAF59F3" aria-label="Permalink for Section 1.2.13"></a></div><table class="simple def">
+<thead>
+
+</thead>
+<tbody><tr>
+<th>Naam</th>
+<td>Referentielijst!</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>Nee</td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Relatie</th>
+<th>Definitie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#75374898-4AFB-4c0f-AE28-25599EAF59F3">Referentielijst!</a> is specialisatie van <a href="#6E318C51-642F-4f4d-957B-77C5D42021E1">Waardelijst!</a></td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="verwijzinggegevenstype"><div class="header-wrapper"><h4 id="7ADA30AB-7A47-4301-B3DD-F2A94917D8C4"><bdi class="secno">1.2.14 </bdi>Verwijzinggegevenstype!</h4><a class="self-link" href="#7ADA30AB-7A47-4301-B3DD-F2A94917D8C4" aria-label="Permalink for Section 1.2.14"></a></div><table class="simple def">
+<thead>
+
+</thead>
+<tbody><tr>
+<th>Naam</th>
+<td>Verwijzinggegevenstype!</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>Nee</td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Attribuut</th>
+<th>Definitie</th>
+<th>Formaat</th>
+<th>Card</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>inverse naam</td>
+<td></td>
+<td><a href="">CharacterString</a></td>
+<td>1..1</td>
+</tr>
+<tr>
+<td>inverse cardinaliteit</td>
+<td></td>
+<td><a href="">CharacterString</a></td>
+<td>1..1</td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Relatie</th>
+<th>Definitie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#7ADA30AB-7A47-4301-B3DD-F2A94917D8C4">Verwijzinggegevenstype!</a> afgeleid van bron in CIM <a href="#C11E0907-9B14-4123-9A26-4F54539FBFEB">Rolinvulling</a> [1..*]</td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#7ADA30AB-7A47-4301-B3DD-F2A94917D8C4">Verwijzinggegevenstype!</a> is specialisatie van <a href="#A73BCD29-D696-47b5-B247-1891B846CCD2">Gegevenstype</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#7ADA30AB-7A47-4301-B3DD-F2A94917D8C4">Verwijzinggegevenstype!</a> heeft als waardetype een doelgegevensobjecttype doelgegevensobjecttype <a href="#D0282BA4-C2F8-4d8c-BF2D-01844E161EEC">Gegevensobjecttype</a> [1..1]</td>
+<td></td>
+</tr>
+</tbody></table>
+</section><section id="waardelijst"><div class="header-wrapper"><h4 id="6E318C51-642F-4f4d-957B-77C5D42021E1"><bdi class="secno">1.2.15 </bdi>Waardelijst!</h4><a class="self-link" href="#6E318C51-642F-4f4d-957B-77C5D42021E1" aria-label="Permalink for Section 1.2.15"></a></div><table class="simple def">
+<thead>
+
+</thead>
+<tbody><tr>
+<th>Naam</th>
+<td>Waardelijst!</td>
+</tr>
+<tr>
+<th>Indicatie abstract object</th>
+<td>Nee</td>
+</tr>
+</tbody></table>
+<table class="simple">
+<thead>
+<tr>
+<th>Relatie</th>
+<th>Definitie</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><a href="#6E318C51-642F-4f4d-957B-77C5D42021E1">Waardelijst!</a> is specialisatie van <a href="#09E003D3-8AD7-474d-8291-F8C4C9C8AE90">Datatype</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#EAA7F9B8-7A33-42fd-8CDE-0B576697598F">Codelijst!</a> is specialisatie van <a href="#6E318C51-642F-4f4d-957B-77C5D42021E1">Waardelijst!</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#58BAE188-BCEB-4a00-BD16-6A49C237E078">Enumeratie!</a> is specialisatie van <a href="#6E318C51-642F-4f4d-957B-77C5D42021E1">Waardelijst!</a></td>
+<td></td>
+</tr>
+<tr>
+<td><a href="#75374898-4AFB-4c0f-AE28-25599EAF59F3">Referentielijst!</a> is specialisatie van <a href="#6E318C51-642F-4f4d-957B-77C5D42021E1">Waardelijst!</a></td>
+<td></td>
+</tr>
+</tbody></table>
+</section></section></section>
 
 
- 
 
 
 
@@ -1450,7 +2070,9 @@ ul.index code{color:inherit}
 
 
 
-<section id="conformance"><div class="header-wrapper"><h2 id="x6-conformiteit"><bdi class="secno">6. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 6."></a></div><p>Naast onderdelen die als niet-normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet-normatief. Verder is alles in dit document normatief.</p>
+
+
+<section id="conformance"><div class="header-wrapper"><h2 id="x2-conformiteit"><bdi class="secno">2. </bdi>Conformiteit</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 2."></a></div><p>Naast onderdelen die als niet-normatief gemarkeerd zijn, zijn ook alle diagrammen, voorbeelden, en noten in dit document niet-normatief. Verder is alles in dit document normatief.</p>
 <section id="tof">
 <section id="index" class="appendix"><div class="header-wrapper"><h4 id="index-0">Index</h4><a class="self-link" href="#index" aria-label="Permalink for this Appendix"></a></div>
 
