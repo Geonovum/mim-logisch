@@ -1,1 +1,1 @@
-TODO: vul in abstract.md een abstract in.
+Dit document beschrijft het metamodel voor een Logisch Gegevensmodel (MIM niveau 3). Dit metamodel is zelf ooi een logisch gegevensmodel: het beschrijft de logische structuur van de vastlegging van een logisch gegevensmodel.
