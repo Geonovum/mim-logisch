@@ -5,10 +5,10 @@ if [ ! -d "scripts/external-libs" ]; then
   mkdir -v scripts/external-libs
 fi
 if [ ! -f "scripts/external-libs/ea2rdf.jar" ]; then
-  curl -L -k https://github.com/architolk/ea2rdf/releases/download/v1.3.1/ea2rdf.jar -o scripts/external-libs/ea2rdf.jar
+  curl -L -k https://github.com/architolk/ea2rdf/releases/download/v1.3.2/ea2rdf.jar -o scripts/external-libs/ea2rdf.jar
 fi
 if [ ! -f "scripts/external-libs/rdf2rdf.jar" ]; then
-  curl -L -k https://github.com/architolk/rdf2rdf/releases/download/v1.5.0/rdf2rdf.jar -o scripts/external-libs/rdf2rdf.jar
+  curl -L -k https://github.com/architolk/rdf2rdf/releases/download/v1.6.0/rdf2rdf.jar -o scripts/external-libs/rdf2rdf.jar
 fi
 if [ ! -f "scripts/external-libs/rdf2xml.jar" ]; then
   curl -L -k https://github.com/architolk/rdf2xml/releases/download/v1.2.1/rdf2xml.jar -o scripts/external-libs/rdf2xml.jar
