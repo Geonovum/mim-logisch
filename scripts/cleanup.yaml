@@ -1,0 +1,39 @@
+title: Cleanup
+version: 0.1
+prefixes:
+  mim: http://modellen.mim-standaard.nl/def/mim#
+queries:
+  - title: Alleen specifieke package meenemen
+    query: >
+      prefix mim: <http://modellen.mim-standaard.nl/def/mim#>
+      insert {
+        graph <urn:output> {
+          ?s?p?o
+        }
+      }
+      where {
+        graph <urn:input> {
+          <urn:uuid:A4DE49C8-97AE-4f2e-B41C-E6931B1FB787> (mim:type|mim:attribuut|mim:bevatModelelement|mim:relatierol|mim:dataElement|mim:waarde|mim:referentieElement|mim:gegevensgroep)* ?s.
+          ?s?p?o
+        }
+      }
+  - title: En diagrammen
+    query: >
+      prefix mim: <http://modellen.mim-standaard.nl/def/mim#>
+      insert {
+        graph <urn:output> {
+          ?s?p?o.
+          ?o?op?oo
+        }
+      }
+      where {
+        graph <urn:input> {
+          ?s a mim:Diagram.
+          ?s mim:beschrijft ?pck.
+          ?s?p?o.
+          OPTIONAL {?o?op?oo}
+        }
+        graph <urn:output> {
+          ?pck a ?type
+        }
+      }

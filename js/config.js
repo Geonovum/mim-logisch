@@ -2,6 +2,8 @@ let respecConfig = {
   useLogo: true,
   useLabel: true,
 
+  postProcess: [markupDefTables],
+
   // TODO: title is verplicht! Neem hieronder de titel van het document op
   title: "MIM - Metamodel Informatiemodellering: Logisch Gegevensmodel (LGM)",
   //-- specStatus is verplicht! (activeer 1 van de volgende)
@@ -35,18 +37,18 @@ let respecConfig = {
   //-- TODO shortName is verplicht! (komt in de URL: kies logische afkorting)
   //-- Regel: shortName mag geen hoofdletters bevatten.
   shortName: "mim-lgm",
-  
-  //edDraftURI = De URI van de draft version. Deze wordt automatisch afgeleid van de github URI; maar kan hier overschreven worden. 
+
+  //edDraftURI = De URI van de draft version. Deze wordt automatisch afgeleid van de github URI; maar kan hier overschreven worden.
 	//edDraftURI: ["https://geonovum.github.io", "/", "shortName"],
 
   //-- publishDate is verplicht. Als je werkversie gekozen hebt  dan pakt Respec
   //-- de pushdate maar de publishDate is nog steeds verplicht.
   publishDate: "2026-02-09",
-  
+
   //-- publishVersion is verplicht. Hij mag wel leeg zijn [], maar niet de lege string zijn "".
   publishVersion: [],
- 
-  //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beide aan/uit! 
+
+  //-- Voor dit blok geldt: alleen als er eerdere versies zijn en altijd beide aan/uit!
   //previousPublishDate: "2014-05-01",
   //previousMaturity: "CV",
 
@@ -58,18 +60,18 @@ let respecConfig = {
   editors:
     [
       {
-        name: "voornaam achternaam",
+        name: "Werkgroep MIM Metamodel",
         company: "Geonovum",
         companyURL: "https://www.geonovum.nl",
       }
     ],
 
-  //-- de namen van de auteur(s) 
-  //-- vul in: per auteur: name:, company:, companyURL: 
+  //-- de namen van de auteur(s)
+  //-- vul in: per auteur: name:, company:, companyURL:
   authors:
     [
       {
-        name: "voornaam achternaam",
+        name: "Paul Janssen",
         company: "Geonovum",
         companyURL: "https://www.geonovum.nl",
       }
@@ -95,7 +97,7 @@ let respecConfig = {
   // - Voeg dan pas hieronder toe.
   // - Zie handleiding: https://geonovum.github.io/handleiding-tooling/ReSpec/ReSpec-onderdelen/#bibliografie
   //
-  localBiblio: 
+  localBiblio:
   {
     MIM12: {
       id: "MIM12",
